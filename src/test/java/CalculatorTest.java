@@ -32,4 +32,11 @@ public class CalculatorTest {
 
         assertEquals(7, calculator.subtract(10, 3), "10 - 3 should equal 7");
     }
+
+    @Test
+    void testMultiplyPositiveNumbers(){
+        Calculator calculator = new Calculator();
+
+        assertEquals(20, calculator.subtract(4, 5), "4 * 5 should equal 20");
+    }
 }
