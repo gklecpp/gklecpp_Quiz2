@@ -1,8 +1,9 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class CalculatorTest {
 
@@ -60,5 +61,23 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
 
         assertTrue(calculator.isEven(4), "4 should be even");
+    }
+
+    @Test
+    void testIsEvenWithOddNumber(){
+        Calculator calculator = new Calculator();
+        assertFalse(calculator.isEven(7), "7 should not be even");
+    }
+
+    @Test
+    void testIsEvenWithZero(){
+        Calculator calculator = new Calculator();
+        assertTrue(calculator.isEven(0), "0 should not be even");
+    }
+
+    @Test
+    void testIsEvenWithNegativeNumber(){
+        Calculator calculator = new Calculator();
+        assertTrue(calculator.isEven(-6), "-6 should not be even");
     }
 }
