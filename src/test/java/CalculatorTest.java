@@ -46,4 +46,11 @@ public class CalculatorTest {
 
         assertEquals(5, calculator.divide(10, 2), "10 / 2 should equal 5");
     }
+
+    @Test
+    void testDivideByZero(){
+        Calculator calculator = new Calculator();
+
+        assertThrows(ArithmeticException.class, () -> calculator.divide(10, 0), "Division by zero should throw an exception");
+    }
 }
