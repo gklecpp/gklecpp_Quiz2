@@ -11,4 +11,18 @@ public class CalculatorTest {
 
         assertEquals(8, calculator.sum(5,3), "5 + 3 should equal 8");
     }
+
+    @Test
+    void testSumNegativeNumbers(){
+        Calculator calculator = new Calculator();
+
+        assertEquals(-8, calculator.sum(-5, -3), "-5 + -3 should equal -8");
+    }
+
+    @Test
+    void testSumWithZero() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(5, calculator.sum(5, 0), "5 + 0 should equal 5");
+    }
 }
