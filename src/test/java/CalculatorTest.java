@@ -80,4 +80,25 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertTrue(calculator.isEven(-6), "-6 should not be even");
     }
+
+    @Test
+    void testSubtractNegativeNumbers(){
+        Calculator calculator = new Calculator();
+
+        assertEquals(-2, calculator.subtract(-5, -3), "-5 - (-3) should equal -2");
+    }
+
+    @Test
+    void testMultiplyByZero(){
+        Calculator calculator = new Calculator();
+
+        assertEquals(0, calculator.multiply(5, 0), "5 * 0 should equal 0");
+    }
+
+    @Test
+    void testMultiplyNegativeNumbers(){
+        Calculator calculator = new Calculator();
+
+        assertEquals(-20, calculator.multiply(-4, 5), "-4 * 5 should equal -20");
+    }
 }
