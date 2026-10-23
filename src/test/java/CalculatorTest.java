@@ -25,4 +25,11 @@ public class CalculatorTest {
 
         assertEquals(5, calculator.sum(5, 0), "5 + 0 should equal 5");
     }
+
+    @Test
+    void testSubtractPositiveNumbers(){
+        Calculator calculator = new Calculator();
+
+        assertEquals(7, calculator.subtract(10, 3), "10 - 3 should equal 7");
+    }
 }
