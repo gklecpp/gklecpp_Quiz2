@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CalculatorTest {
 
@@ -52,5 +53,12 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
 
         assertThrows(ArithmeticException.class, () -> calculator.divide(10, 0), "Division by zero should throw an exception");
+    }
+
+    @Test
+    void testIsEvenWithEvenNumber() {
+        Calculator calculator = new Calculator();
+
+        assertTrue(calculator.isEven(4), "4 should be even");
     }
 }
