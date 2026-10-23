@@ -37,6 +37,13 @@ public class CalculatorTest {
     void testMultiplyPositiveNumbers(){
         Calculator calculator = new Calculator();
 
-        assertEquals(20, calculator.subtract(4, 5), "4 * 5 should equal 20");
+        assertEquals(20, calculator.multiply(4, 5), "4 * 5 should equal 20");
+    }
+
+    @Test
+    void testDividePositiveNumbers(){
+        Calculator calculator = new Calculator();
+
+        assertEquals(5, calculator.divide(10, 2), "10 / 2 should equal 5");
     }
 }
